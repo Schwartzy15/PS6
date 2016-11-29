@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="6" failures="0" name="base.Person_Test" time="5.571" errors="6" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.101-b13"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/michaelschwartz/git/PS6Starter/PS6_DAL"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/michaelschwartz/git/PS6Starter/PS6_DAL"/>
+    <property name="java.runtime.version" value="1.8.0_101-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/lj/6wmwf4tn1f38d4v4tl8m75r80000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/michaelschwartz/Documents/CISC181 Workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf6970828611829123329.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/michaelschwartz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.10.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/michaelschwartz"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="michaelschwartz"/>
+    <property name="java.class.path" value="/Applications/Eclipse.app/Contents/Eclipse/../../../../Users/michaelschwartz/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_101"/>
+    <property name="java.ext.dirs" value="/Users/michaelschwartz/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/michaelschwartz/git/PS6Starter/PS6_DAL/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="base.Person_Test" name="DeletePersonTest" time="2.749">
+    <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at base.PersonDAL.getPerson(PersonDAL.java:76)
+	at base.Person_Test.DeletePersonTest(Person_Test.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>19:19:07.138 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:19:07.148 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+19:19:07.149 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+19:19:07.150 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+19:19:07.204 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.2.Final}
+19:19:07.205 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+19:19:07.206 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+19:19:07.228 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+19:19:07.228 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+19:19:07.232 [main] DEBUG o.h.b.c.internal.JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+19:19:07.415 [main] DEBUG org.hibernate.cfg.Configuration - Building session factory using internal StandardServiceRegistryBuilder
+19:19:07.420 [main] DEBUG o.h.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+19:19:07.421 [main] DEBUG org.hibernate.cfg.Configuration - Building session factory using provided StandardServiceRegistry
+19:19:07.430 [main] DEBUG o.h.c.i.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+19:19:07.435 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+19:19:07.442 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Mapping DTD 3.0//EN] - [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+19:19:07.443 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+19:19:07.443 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver - Recognized legacy hibernate-mapping identifier; attempting to resolve on classpath under org/hibernate/
+19:19:07.453 [main] DEBUG o.h.boot.jaxb.internal.MappingBinder - Performing JAXB binding of hbm.xml document : Origin(name=mapping/Person.hbm.xml,type=RESOURCE)
+19:19:07.910 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@5c7933ad
+19:19:07.910 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@5c7933ad
+19:19:07.911 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -&gt; org.hibernate.type.BooleanType@5c7933ad
+19:19:07.911 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -&gt; org.hibernate.type.NumericBooleanType@68c9d179
+19:19:07.912 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -&gt; org.hibernate.type.TrueFalseType@3feb2dda
+19:19:07.912 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -&gt; org.hibernate.type.YesNoType@333d4a8c
+19:19:07.913 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -&gt; org.hibernate.type.ByteType@c05fddc
+19:19:07.913 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -&gt; org.hibernate.type.ByteType@c05fddc
+19:19:07.913 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -&gt; org.hibernate.type.ByteType@c05fddc
+19:19:07.914 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -&gt; org.hibernate.type.CharacterType@50378a4
+19:19:07.914 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -&gt; org.hibernate.type.CharacterType@50378a4
+19:19:07.914 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -&gt; org.hibernate.type.CharacterType@50378a4
+19:19:07.915 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -&gt; org.hibernate.type.ShortType@97e93f1
+19:19:07.915 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -&gt; org.hibernate.type.ShortType@97e93f1
+19:19:07.915 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -&gt; org.hibernate.type.ShortType@97e93f1
+19:19:07.915 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -&gt; org.hibernate.type.IntegerType@624ea235
+19:19:07.915 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -&gt; org.hibernate.type.IntegerType@624ea235
+19:19:07.916 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -&gt; org.hibernate.type.IntegerType@624ea235
+19:19:07.916 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -&gt; org.hibernate.type.LongType@6f43c82
+19:19:07.916 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -&gt; org.hibernate.type.LongType@6f43c82
+19:19:07.916 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -&gt; org.hibernate.type.LongType@6f43c82
+19:19:07.917 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -&gt; org.hibernate.type.FloatType@446a1e84
+19:19:07.917 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -&gt; org.hibernate.type.FloatType@446a1e84
+19:19:07.917 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -&gt; org.hibernate.type.FloatType@446a1e84
+19:19:07.918 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -&gt; org.hibernate.type.DoubleType@387a8303
+19:19:07.920 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -&gt; org.hibernate.type.DoubleType@387a8303
+19:19:07.920 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -&gt; org.hibernate.type.DoubleType@387a8303
+19:19:07.921 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -&gt; org.hibernate.type.BigDecimalType@5276d6ee
+19:19:07.921 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -&gt; org.hibernate.type.BigDecimalType@5276d6ee
+19:19:07.921 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -&gt; org.hibernate.type.BigIntegerType@4dc27487
+19:19:07.921 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -&gt; org.hibernate.type.BigIntegerType@4dc27487
+19:19:07.922 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -&gt; org.hibernate.type.StringType@6933b6c6
+19:19:07.922 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -&gt; org.hibernate.type.StringType@6933b6c6
+19:19:07.922 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -&gt; org.hibernate.type.StringNVarcharType@1f9e9475
+19:19:07.923 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -&gt; org.hibernate.type.CharacterNCharType@14dd7b39
+19:19:07.923 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -&gt; org.hibernate.type.UrlType@51891008
+19:19:07.924 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -&gt; org.hibernate.type.UrlType@51891008
+19:19:07.924 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -&gt; org.hibernate.type.DateType@1b66c0fb
+19:19:07.925 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -&gt; org.hibernate.type.DateType@1b66c0fb
+19:19:07.925 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -&gt; org.hibernate.type.TimeType@465232e9
+19:19:07.926 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -&gt; org.hibernate.type.TimeType@465232e9
+19:19:07.926 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -&gt; org.hibernate.type.TimestampType@5efa40fe
+19:19:07.926 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -&gt; org.hibernate.type.TimestampType@5efa40fe
+19:19:07.927 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -&gt; org.hibernate.type.TimestampType@5efa40fe
+19:19:07.930 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -&gt; org.hibernate.type.DbTimestampType@45385f75
+19:19:07.931 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -&gt; org.hibernate.type.CalendarType@6f36c2f0
+19:19:07.931 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -&gt; org.hibernate.type.CalendarType@6f36c2f0
+19:19:07.931 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -&gt; org.hibernate.type.CalendarType@6f36c2f0
+19:19:07.931 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -&gt; org.hibernate.type.CalendarDateType@29f7cefd
+19:19:07.932 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -&gt; org.hibernate.type.LocaleType@13d73f29
+19:19:07.932 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -&gt; org.hibernate.type.LocaleType@13d73f29
+19:19:07.933 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -&gt; org.hibernate.type.CurrencyType@2fb0623e
+19:19:07.933 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -&gt; org.hibernate.type.CurrencyType@2fb0623e
+19:19:07.933 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -&gt; org.hibernate.type.TimeZoneType@311bf055
+19:19:07.933 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -&gt; org.hibernate.type.TimeZoneType@311bf055
+19:19:07.934 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -&gt; org.hibernate.type.ClassType@78452606
+19:19:07.934 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -&gt; org.hibernate.type.ClassType@78452606
+19:19:07.934 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -&gt; org.hibernate.type.UUIDBinaryType@17503f6b
+19:19:07.934 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -&gt; org.hibernate.type.UUIDBinaryType@17503f6b
+19:19:07.935 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -&gt; org.hibernate.type.UUIDCharType@36804139
+19:19:07.935 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -&gt; org.hibernate.type.BinaryType@5c86dbc5
+19:19:07.935 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -&gt; org.hibernate.type.BinaryType@5c86dbc5
+19:19:07.935 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -&gt; org.hibernate.type.BinaryType@5c86dbc5
+19:19:07.936 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -&gt; org.hibernate.type.WrapperBinaryType@60db1c0e
+19:19:07.936 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -&gt; org.hibernate.type.WrapperBinaryType@60db1c0e
+19:19:07.936 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -&gt; org.hibernate.type.WrapperBinaryType@60db1c0e
+19:19:07.937 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -&gt; org.hibernate.type.ImageType@2438dcd
+19:19:07.937 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -&gt; org.hibernate.type.CharArrayType@3e2055d6
+19:19:07.937 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -&gt; org.hibernate.type.CharArrayType@3e2055d6
+19:19:07.937 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -&gt; org.hibernate.type.CharArrayType@3e2055d6
+19:19:07.938 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -&gt; org.hibernate.type.CharacterArrayType@28194a50
+19:19:07.938 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -&gt; org.hibernate.type.CharacterArrayType@28194a50
+19:19:07.938 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -&gt; org.hibernate.type.CharacterArrayType@28194a50
+19:19:07.938 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -&gt; org.hibernate.type.TextType@2ad48653
+19:19:07.939 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -&gt; org.hibernate.type.NTextType@61710c6
+19:19:07.941 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -&gt; org.hibernate.type.BlobType@4149c063
+19:19:07.941 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@4149c063
+19:19:07.941 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@38af9828
+19:19:07.943 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -&gt; org.hibernate.type.ClobType@4c5ae43b
+19:19:07.943 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@4c5ae43b
+19:19:07.945 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -&gt; org.hibernate.type.NClobType@35a3d49f
+19:19:07.945 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -&gt; org.hibernate.type.NClobType@35a3d49f
+19:19:07.945 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@478db956
+19:19:07.945 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -&gt; org.hibernate.type.MaterializedNClobType@51bd8b5c
+19:19:07.946 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -&gt; org.hibernate.type.SerializableType@64ec96c6
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -&gt; org.hibernate.type.ObjectType@19976a65
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -&gt; org.hibernate.type.ObjectType@19976a65
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -&gt; org.hibernate.type.AdaptedImmutableType@57a3e26a
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -&gt; org.hibernate.type.AdaptedImmutableType@75c56eb9
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -&gt; org.hibernate.type.AdaptedImmutableType@4bc222e
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -&gt; org.hibernate.type.AdaptedImmutableType@2dc9b0f5
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -&gt; org.hibernate.type.AdaptedImmutableType@6531a794
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -&gt; org.hibernate.type.AdaptedImmutableType@3b5fad2d
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -&gt; org.hibernate.type.AdaptedImmutableType@5e17553a
+19:19:07.948 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -&gt; org.hibernate.type.AdaptedImmutableType@3eb91815
+19:19:07.954 [main] WARN  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+19:19:07.954 [main] DEBUG o.h.e.j.c.i.DriverManagerConnectionProviderImpl - No driver class specified
+19:19:07.954 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [null] at URL [jdbc:oracle:thin:@cisc181.canrkwijj6g6.us-east-1.rds.amazonaws.com:1521:ORCL]
+19:19:07.955 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=Schwartzy, password=Zerodark30}
+19:19:07.955 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+19:19:07.956 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+19:19:07.956 [main] DEBUG o.h.e.j.c.i.DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+19:19:08.749 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Database -&gt;
+       name : Oracle
+    version : Oracle Database 11g Release 11.2.0.4.0 - 64bit Production
+      major : 11
+      minor : 2
+19:19:08.749 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Driver -&gt;
+       name : Oracle JDBC driver
+    version : 11.2.0.3.0
+      major : 11
+      minor : 2
+19:19:08.750 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - JDBC version : 11.2
+19:19:08.759 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+19:19:08.768 [main] DEBUG o.h.e.j.c.i.StandardRefCursorSupport - Unexpected error trying to gauge level of JDBC REF_CURSOR support : null
+19:19:08.968 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -&gt; [org.hibernate.id.UUIDGenerator]
+19:19:08.969 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -&gt; [org.hibernate.id.GUIDGenerator]
+19:19:08.969 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -&gt; [org.hibernate.id.UUIDHexGenerator]
+19:19:08.969 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -&gt; [org.hibernate.id.UUIDHexGenerator]
+19:19:08.970 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -&gt; [org.hibernate.id.Assigned]
+19:19:08.970 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -&gt; [org.hibernate.id.IdentityGenerator]
+19:19:08.970 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -&gt; [org.hibernate.id.SelectGenerator]
+19:19:08.971 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -&gt; [org.hibernate.id.enhanced.SequenceStyleGenerator]
+19:19:08.972 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -&gt; [org.hibernate.id.SequenceHiLoGenerator]
+19:19:08.972 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -&gt; [org.hibernate.id.IncrementGenerator]
+19:19:08.972 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -&gt; [org.hibernate.id.ForeignGenerator]
+19:19:08.972 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -&gt; [org.hibernate.id.SequenceIdentityGenerator]
+19:19:08.972 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -&gt; [org.hibernate.id.enhanced.SequenceStyleGenerator]
+19:19:08.973 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -&gt; [org.hibernate.id.enhanced.TableGenerator]
+19:19:08.999 [main] DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=Schwartzy}, physicalName=Name{catalog=null, schema=Schwartzy}]
+19:19:09.012 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapping class: domain.PersonDomainModel -&gt; per
+19:19:09.015 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: PersonID -&gt; [PersonID]
+19:19:09.016 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: firstName -&gt; [firstName]
+19:19:09.017 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: middleName -&gt; [middleName]
+19:19:09.017 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: lastName -&gt; [lastName]
+19:19:09.017 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: street -&gt; [street]
+19:19:09.017 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: postalCode -&gt; [postalCode]
+19:19:09.017 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: city -&gt; [city]
+19:19:09.017 [main] DEBUG o.h.b.m.s.internal.hbm.ModelBinder - Mapped property: birthday -&gt; [birthday]
+19:19:09.033 [main] DEBUG o.h.internal.SessionFactoryImpl - Building session factory
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): disabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Statistics: disabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Default entity-mode: pojo
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Default batch fetch size: -1
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Maximum outer join fetch depth: null
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Default null ordering: NONE
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
+19:19:09.034 [main] DEBUG org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - JTA Track by Thread: enabled
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - Query language substitutions: {}
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - JPA query language strict compliance: disabled
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - Named query checking : enabled
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache: enabled
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - Second-level query cache: disabled
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@25e2a451
+19:19:09.035 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache region prefix: null
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - JDBC batch size: 15
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - JDBC batch updates for versioned data: disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Scrollable result sets: enabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Wrap result sets: disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): disabled
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - JDBC result set fetch size: null
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Connection release mode: ON_CLOSE
+19:19:09.036 [main] DEBUG org.hibernate.cfg.Settings - Generate SQL with comments: disabled
+19:19:09.060 [main] DEBUG o.h.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+19:19:09.060 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiating session factory with properties: {hibernate.connection.password=Zerodark30, java.runtime.name=Java(TM) SE Runtime Environment, java.vm.version=25.101-b13, hibernate.default_schema=Schwartzy, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib, hibernate.connection.username=Schwartzy, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@47dbb1e2, gopherProxySet=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.os.patch.level=unknown, user.country=US, sun.java.launcher=SUN_STANDARD, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/Users/michaelschwartz/git/PS6Starter/PS6_DAL, java.runtime.version=1.8.0_101-b13, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, basedir=/Users/michaelschwartz/git/PS6Starter/PS6_DAL, os.arch=x86_64, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/endorsed, surefire.real.class.path=/Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/surefire/surefirebooter5580343289433129571.jar, java.io.tmpdir=/var/folders/lj/6wmwf4tn1f38d4v4tl8m75r80000gn/T/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, os.name=Mac OS X, sun.jnu.encoding=UTF-8, java.library.path=/Users/michaelschwartz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., surefire.test.class.path=/Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/test-classes:/Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/classes:/Users/michaelschwartz/.m2/repository/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-core/3.2.3.RELEASE/spring-core-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/michaelschwartz/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/Users/michaelschwartz/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/Users/michaelschwartz/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/hibernate-entitymanager/5.0.2.Final/hibernate-entitymanager-5.0.2.Final.jar:/Users/michaelschwartz/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/hibernate-core/5.0.2.Final/hibernate-core-5.0.2.Final.jar:/Users/michaelschwartz/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/michaelschwartz/.m2/repository/org/jboss/jandex/1.2.2.Final/jandex-1.2.2.Final.jar:/Users/michaelschwartz/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/michaelschwartz/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.0.Final/hibernate-commons-annotations-5.0.0.Final.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/michaelschwartz/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/michaelschwartz/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-test/3.2.3.RELEASE/spring-test-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/michaelschwartz/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/michaelschwartz/.m2/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar:, java.class.version=52.0, java.specification.name=Java Platform API Specification, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.10.5, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/michaelschwartz, user.timezone=America/New_York, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, hibernate.format_sql=true, show_sql=true, user.name=michaelschwartz, java.class.path=/Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/test-classes:/Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/classes:/Users/michaelschwartz/.m2/repository/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-core/3.2.3.RELEASE/spring-core-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/michaelschwartz/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/Users/michaelschwartz/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/Users/michaelschwartz/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/hibernate-entitymanager/5.0.2.Final/hibernate-entitymanager-5.0.2.Final.jar:/Users/michaelschwartz/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/hibernate-core/5.0.2.Final/hibernate-core-5.0.2.Final.jar:/Users/michaelschwartz/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/michaelschwartz/.m2/repository/org/jboss/jandex/1.2.2.Final/jandex-1.2.2.Final.jar:/Users/michaelschwartz/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/michaelschwartz/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.0.Final/hibernate-commons-annotations-5.0.0.Final.jar:/Users/michaelschwartz/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/michaelschwartz/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/michaelschwartz/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/Users/michaelschwartz/.m2/repository/org/springframework/spring-test/3.2.3.RELEASE/spring-test-3.2.3.RELEASE.jar:/Users/michaelschwartz/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/michaelschwartz/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/michaelschwartz/.m2/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar:, hibernate.bytecode.use_reflection_optimizer=false, format_sql=true, hibernate.show_sql=true, java.vm.specification.version=1.8, sun.arch.data.model=64, sun.java.command=/Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/surefire/surefirebooter5580343289433129571.jar /Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/surefire/surefire1328796648908017355tmp /Users/michaelschwartz/git/PS6Starter/PS6_DAL/target/surefire/surefire_05436162690423301380tmp, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre, hibernate.connection.url=jdbc:oracle:thin:@cisc181.canrkwijj6g6.us-east-1.rds.amazonaws.com:1521:ORCL, hibernate.dialect=org.hibernate.dialect.Oracle10gDialect, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.lwawt.macosx.LWCToolkit, java.vm.info=mixed mode, java.version=1.8.0_101, java.ext.dirs=/Users/michaelschwartz/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/classes, java.vendor=Oracle Corporation, localRepository=/Users/michaelschwartz/.m2/repository, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, hibernate.hbm2ddl.auto=update, sun.io.unicode.encoding=UnicodeBig, sun.cpu.endian=little, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, sun.cpu.isalist=}
+19:19:09.066 [main] DEBUG o.h.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+19:19:09.084 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [domain.PersonDomainModel] is safe
+19:19:09.084 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : domain.PersonDomainModel
+19:19:09.094 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [domain.PersonDomainModel] is safe
+19:19:09.094 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : domain.PersonDomainModel
+19:19:09.163 [main] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: domain.PersonDomainModel
+19:19:09.163 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select PersonID from Schwartzy.per where PersonID =?
+19:19:09.163 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select persondoma_.PersonID, persondoma_.firstName as firstName2_0_, persondoma_.middleName as middleName3_0_, persondoma_.lastName as lastName4_0_, persondoma_.street as street5_0_, persondoma_.postalCode as postalCode6_0_, persondoma_.city as city7_0_, persondoma_.birthday as birthday8_0_ from Schwartzy.per persondoma_ where persondoma_.PersonID=?
+19:19:09.163 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into Schwartzy.per (firstName, middleName, lastName, street, postalCode, city, birthday, PersonID) values (?, ?, ?, ?, ?, ?, ?, ?)
+19:19:09.163 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update Schwartzy.per set firstName=?, middleName=?, lastName=?, street=?, postalCode=?, city=?, birthday=? where PersonID=?
+19:19:09.163 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from Schwartzy.per where PersonID=?
+19:19:09.176 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@21ca139c]
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.177 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.177 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.186 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.188 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.190 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [NONE]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=?
+19:19:09.190 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6bc28a83]
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.190 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.190 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.190 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.190 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.190 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [READ]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=?
+19:19:09.191 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@13579834]
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.191 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.191 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.191 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.191 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [UPGRADE]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update
+19:19:09.191 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5bd73d1a]
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.191 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.192 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.192 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.192 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.192 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [UPGRADE_NOWAIT]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update nowait
+19:19:09.192 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2555fff0]
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.192 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.193 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.193 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.193 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.193 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [UPGRADE_SKIPLOCKED]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update skip locked
+19:19:09.193 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@120f38e6]
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.193 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.193 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.194 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.194 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.194 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [FORCE]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update nowait
+19:19:09.194 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@702ed190]
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.194 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.194 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.194 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.195 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.195 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [PESSIMISTIC_READ]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update
+19:19:09.195 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7c18432b]
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.195 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.195 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.195 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.195 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.195 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [PESSIMISTIC_WRITE]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update
+19:19:09.195 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@70e29e14]
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.196 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.196 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.196 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.196 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [PESSIMISTIC_FORCE_INCREMENT]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=? for update nowait
+19:19:09.196 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a4bef8]
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.196 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.197 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.197 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.197 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.197 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [OPTIMISTIC]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=?
+19:19:09.197 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = &lt;gen:0&gt; -&gt; org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2449cff7]
+19:19:09.197 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+19:19:09.197 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middleName
+19:19:09.197 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+19:19:09.197 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : street
+19:19:09.198 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : postalCode
+19:19:09.198 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : city
+19:19:09.198 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : birthday
+19:19:09.198 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:19:09.198 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace &lt;gen:0&gt;
+19:19:09.198 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=domain.PersonDomainModel)
+    - Returns
+       - EntityReturnImpl(entity=domain.PersonDomainModel, querySpaceUid=&lt;gen:0&gt;, path=domain.PersonDomainModel)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=&lt;gen:0&gt;, entity=domain.PersonDomainModel)
+          - SQL table alias mapping - persondoma0_
+          - alias suffix - 0_
+          - suffixed key columns - {PersonID1_0_0_}
+
+19:19:09.198 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity domain.PersonDomainModel [OPTIMISTIC_FORCE_INCREMENT]: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=?
+19:19:09.210 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity domain.PersonDomainModel: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=?
+19:19:09.210 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity domain.PersonDomainModel: select persondoma0_.PersonID as PersonID1_0_0_, persondoma0_.firstName as firstName2_0_0_, persondoma0_.middleName as middleName3_0_0_, persondoma0_.lastName as lastName4_0_0_, persondoma0_.street as street5_0_0_, persondoma0_.postalCode as postalCode6_0_0_, persondoma0_.city as city7_0_0_, persondoma0_.birthday as birthday8_0_0_ from Schwartzy.per persondoma0_ where persondoma0_.PersonID=?
+19:19:09.210 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory
+19:19:09.212 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+19:19:09.564 [main] INFO  o.h.t.s.e.i.InformationExtractorJdbcDatabaseMetaDataImpl - HHH000262: Table not found: per
+19:19:09.624 [main] DEBUG o.h.e.t.j.p.i.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+19:19:09.625 [main] DEBUG o.h.e.t.j.p.i.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+19:19:09.627 [main] DEBUG o.h.e.t.j.p.i.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:19:09.628 [main] DEBUG o.h.internal.NamedQueryRepository - Checking 0 named HQL queries
+19:19:09.628 [main] DEBUG o.h.internal.NamedQueryRepository - Checking 0 named SQL queries
+19:19:09.629 [main] DEBUG o.h.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@60b85ba1
+19:19:09.631 [main] DEBUG o.h.internal.SessionFactoryRegistry - Registering SessionFactory: a884a01e-3e2b-4636-a699-1e8793ebcb94 (&lt;unnamed&gt;)
+19:19:09.631 [main] DEBUG o.h.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+19:19:09.661 [main] DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+19:19:09.661 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:19:09.668 [main] DEBUG o.h.h.i.QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@737edcfa
+19:19:09.668 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+19:19:09.688 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - parse() - HQL: from domain.PersonDomainModel where personId = :id 
+19:19:09.693 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    +-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+    |  \-[FROM] Node: &apos;from&apos;
+    |     \-[RANGE] Node: &apos;RANGE&apos;
+    |        \-[DOT] Node: &apos;.&apos;
+    |           +-[IDENT] Node: &apos;domain&apos;
+    |           \-[IDENT] Node: &apos;PersonDomainModel&apos;
+    \-[WHERE] Node: &apos;where&apos;
+       \-[EQ] Node: &apos;=&apos;
+          +-[IDENT] Node: &apos;personId&apos;
+          \-[COLON] Node: &apos;:&apos;
+             \-[IDENT] Node: &apos;id&apos;
+
+19:19:09.693 [main] DEBUG o.h.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+19:19:09.711 [main] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select &lt;&lt; begin [level=1, statement=select]
+19:19:09.721 [main] DEBUG o.h.h.internal.ast.tree.FromElement - FromClause{level=1} : domain.PersonDomainModel (&lt;no alias&gt;) -&gt; persondoma0_
+19:19:09.724 [main] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+19:19:09.724 [main] DEBUG o.h.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} Schwartzy.per persondoma0_ ) ( where ( = personId ? ) ) )
+19:19:09.727 [main] DEBUG o.h.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+19:19:09.730 [main] DEBUG o.h.h.i.ast.util.JoinProcessor - Using FROM fragment [Schwartzy.per persondoma0_]
+19:19:09.730 [main] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select &gt;&gt; end [level=1, statement=select]
+19:19:09.730 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (Schwartzy.per)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;persondoma0_.PersonID as PersonID1_0_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=Schwartzy.per,tableAlias=persondoma0_,origin=null,columns={,className=domain.PersonDomainModel}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;persondoma0_.firstName as firstName2_0_, persondoma0_.middleName as middleName3_0_, persondoma0_.lastName as lastName4_0_, persondoma0_.street as street5_0_, persondoma0_.postalCode as postalCode6_0_, persondoma0_.city as city7_0_, persondoma0_.birthday as birthday8_0_&apos;
+    +-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[persondoma0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: &apos;Schwartzy.per persondoma0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=Schwartzy.per,tableAlias=persondoma0_,origin=null,columns={,className=domain.PersonDomainModel}}
+    \-[WHERE] SqlNode: &apos;where&apos;
+       \-[EQ] BinaryLogicOperatorNode: &apos;=&apos;
+          +-[IDENT] IdentNode: &apos;personId&apos; {originalText=personId}
+          \-[NAMED_PARAM] ParameterNode: &apos;?&apos; {name=id, expectedType=null}
+
+19:19:09.731 [main] DEBUG o.h.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+19:19:09.735 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - HQL: from domain.PersonDomainModel where personId = :id 
+19:19:09.735 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - SQL: select persondoma0_.PersonID as PersonID1_0_, persondoma0_.firstName as firstName2_0_, persondoma0_.middleName as middleName3_0_, persondoma0_.lastName as lastName4_0_, persondoma0_.street as street5_0_, persondoma0_.postalCode as postalCode6_0_, persondoma0_.city as city7_0_, persondoma0_.birthday as birthday8_0_ from Schwartzy.per persondoma0_ where personId=?
+19:19:09.735 [main] DEBUG o.h.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+19:19:09.745 [main] DEBUG org.hibernate.SQL - 
+    select
+        persondoma0_.PersonID as PersonID1_0_,
+        persondoma0_.firstName as firstName2_0_,
+        persondoma0_.middleName as middleName3_0_,
+        persondoma0_.lastName as lastName4_0_,
+        persondoma0_.street as street5_0_,
+        persondoma0_.postalCode as postalCode6_0_,
+        persondoma0_.city as city7_0_,
+        persondoma0_.birthday as birthday8_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        personId=?
+Hibernate: 
+    select
+        persondoma0_.PersonID as PersonID1_0_,
+        persondoma0_.firstName as firstName2_0_,
+        persondoma0_.middleName as middleName3_0_,
+        persondoma0_.lastName as lastName4_0_,
+        persondoma0_.street as street5_0_,
+        persondoma0_.postalCode as postalCode6_0_,
+        persondoma0_.city as city7_0_,
+        persondoma0_.birthday as birthday8_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        personId=?
+19:19:09.760 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:19:09.763 [main] DEBUG org.hibernate.SQL - 
+    select
+        persondoma0_.PersonID as PersonID1_0_0_,
+        persondoma0_.firstName as firstName2_0_0_,
+        persondoma0_.middleName as middleName3_0_0_,
+        persondoma0_.lastName as lastName4_0_0_,
+        persondoma0_.street as street5_0_0_,
+        persondoma0_.postalCode as postalCode6_0_0_,
+        persondoma0_.city as city7_0_0_,
+        persondoma0_.birthday as birthday8_0_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        persondoma0_.PersonID=?
+Hibernate: 
+    select
+        persondoma0_.PersonID as PersonID1_0_0_,
+        persondoma0_.firstName as firstName2_0_0_,
+        persondoma0_.middleName as middleName3_0_0_,
+        persondoma0_.lastName as lastName4_0_0_,
+        persondoma0_.street as street5_0_0_,
+        persondoma0_.postalCode as postalCode6_0_0_,
+        persondoma0_.city as city7_0_0_,
+        persondoma0_.birthday as birthday8_0_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        persondoma0_.PersonID=?
+19:19:09.773 [main] DEBUG o.h.r.j.i.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+19:19:09.774 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader - Done entity load : domain.PersonDomainModel#528febe4-f8a7-4a6d-84f6-4dc335482b16
+</system-out>
+  </testcase>
+  <testcase classname="base.Person_Test" name="DeletePersonTest" time="2.751">
+    <error message="attempt to create delete event with null entity" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: attempt to create delete event with null entity
+	at org.hibernate.event.spi.DeleteEvent.&lt;init&gt;(DeleteEvent.java:31)
+	at org.hibernate.internal.SessionImpl.delete(SessionImpl.java:859)
+	at base.PersonDAL.deletePerson(PersonDAL.java:97)
+	at base.Person_Test.tearDown(Person_Test.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="base.Person_Test" name="UpdatePersonTest" time="0.016">
+    <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at base.PersonDAL.getPerson(PersonDAL.java:76)
+	at base.Person_Test.UpdatePersonTest(Person_Test.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>19:19:09.777 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:19:09.778 [main] DEBUG org.hibernate.SQL - 
+    select
+        persondoma0_.PersonID as PersonID1_0_,
+        persondoma0_.firstName as firstName2_0_,
+        persondoma0_.middleName as middleName3_0_,
+        persondoma0_.lastName as lastName4_0_,
+        persondoma0_.street as street5_0_,
+        persondoma0_.postalCode as postalCode6_0_,
+        persondoma0_.city as city7_0_,
+        persondoma0_.birthday as birthday8_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        personId=?
+Hibernate: 
+    select
+        persondoma0_.PersonID as PersonID1_0_,
+        persondoma0_.firstName as firstName2_0_,
+        persondoma0_.middleName as middleName3_0_,
+        persondoma0_.lastName as lastName4_0_,
+        persondoma0_.street as street5_0_,
+        persondoma0_.postalCode as postalCode6_0_,
+        persondoma0_.city as city7_0_,
+        persondoma0_.birthday as birthday8_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        personId=?
+19:19:09.787 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:19:09.788 [main] DEBUG org.hibernate.SQL - 
+    select
+        persondoma0_.PersonID as PersonID1_0_0_,
+        persondoma0_.firstName as firstName2_0_0_,
+        persondoma0_.middleName as middleName3_0_0_,
+        persondoma0_.lastName as lastName4_0_0_,
+        persondoma0_.street as street5_0_0_,
+        persondoma0_.postalCode as postalCode6_0_0_,
+        persondoma0_.city as city7_0_0_,
+        persondoma0_.birthday as birthday8_0_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        persondoma0_.PersonID=?
+Hibernate: 
+    select
+        persondoma0_.PersonID as PersonID1_0_0_,
+        persondoma0_.firstName as firstName2_0_0_,
+        persondoma0_.middleName as middleName3_0_0_,
+        persondoma0_.lastName as lastName4_0_0_,
+        persondoma0_.street as street5_0_0_,
+        persondoma0_.postalCode as postalCode6_0_0_,
+        persondoma0_.city as city7_0_0_,
+        persondoma0_.birthday as birthday8_0_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        persondoma0_.PersonID=?
+19:19:09.796 [main] DEBUG o.h.r.j.i.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+19:19:09.796 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader - Done entity load : domain.PersonDomainModel#528febe4-f8a7-4a6d-84f6-4dc335482b16
+</system-out>
+  </testcase>
+  <testcase classname="base.Person_Test" name="UpdatePersonTest" time="0.016">
+    <error message="attempt to create delete event with null entity" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: attempt to create delete event with null entity
+	at org.hibernate.event.spi.DeleteEvent.&lt;init&gt;(DeleteEvent.java:31)
+	at org.hibernate.internal.SessionImpl.delete(SessionImpl.java:859)
+	at base.PersonDAL.deletePerson(PersonDAL.java:97)
+	at base.Person_Test.tearDown(Person_Test.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="base.Person_Test" name="AddPersonTest" time="0.019">
+    <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at base.PersonDAL.getPerson(PersonDAL.java:76)
+	at base.Person_Test.AddPersonTest(Person_Test.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>19:19:09.797 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:19:09.798 [main] DEBUG org.hibernate.SQL - 
+    select
+        persondoma0_.PersonID as PersonID1_0_,
+        persondoma0_.firstName as firstName2_0_,
+        persondoma0_.middleName as middleName3_0_,
+        persondoma0_.lastName as lastName4_0_,
+        persondoma0_.street as street5_0_,
+        persondoma0_.postalCode as postalCode6_0_,
+        persondoma0_.city as city7_0_,
+        persondoma0_.birthday as birthday8_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        personId=?
+Hibernate: 
+    select
+        persondoma0_.PersonID as PersonID1_0_,
+        persondoma0_.firstName as firstName2_0_,
+        persondoma0_.middleName as middleName3_0_,
+        persondoma0_.lastName as lastName4_0_,
+        persondoma0_.street as street5_0_,
+        persondoma0_.postalCode as postalCode6_0_,
+        persondoma0_.city as city7_0_,
+        persondoma0_.birthday as birthday8_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        personId=?
+19:19:09.807 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:19:09.807 [main] DEBUG org.hibernate.SQL - 
+    select
+        persondoma0_.PersonID as PersonID1_0_0_,
+        persondoma0_.firstName as firstName2_0_0_,
+        persondoma0_.middleName as middleName3_0_0_,
+        persondoma0_.lastName as lastName4_0_0_,
+        persondoma0_.street as street5_0_0_,
+        persondoma0_.postalCode as postalCode6_0_0_,
+        persondoma0_.city as city7_0_0_,
+        persondoma0_.birthday as birthday8_0_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        persondoma0_.PersonID=?
+Hibernate: 
+    select
+        persondoma0_.PersonID as PersonID1_0_0_,
+        persondoma0_.firstName as firstName2_0_0_,
+        persondoma0_.middleName as middleName3_0_0_,
+        persondoma0_.lastName as lastName4_0_0_,
+        persondoma0_.street as street5_0_0_,
+        persondoma0_.postalCode as postalCode6_0_0_,
+        persondoma0_.city as city7_0_0_,
+        persondoma0_.birthday as birthday8_0_0_ 
+    from
+        Schwartzy.per persondoma0_ 
+    where
+        persondoma0_.PersonID=?
+19:19:09.815 [main] DEBUG o.h.r.j.i.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+19:19:09.816 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader - Done entity load : domain.PersonDomainModel#528febe4-f8a7-4a6d-84f6-4dc335482b16
+</system-out>
+  </testcase>
+  <testcase classname="base.Person_Test" name="AddPersonTest" time="0.02">
+    <error message="attempt to create delete event with null entity" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: attempt to create delete event with null entity
+	at org.hibernate.event.spi.DeleteEvent.&lt;init&gt;(DeleteEvent.java:31)
+	at org.hibernate.internal.SessionImpl.delete(SessionImpl.java:859)
+	at base.PersonDAL.deletePerson(PersonDAL.java:97)
+	at base.Person_Test.tearDown(Person_Test.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+</testsuite>
